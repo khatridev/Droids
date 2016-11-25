@@ -1,0 +1,283 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.devk.rideguide.fragments.VehicleFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_margin="20dp"
+        android:id="@+id/cardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtVehicleType"
+                  android:layout_alignParentBottom="true"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtVehicleModel"
+                    android:gravity="end"
+                    android:layout_alignParentTop="true"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary" />
+
+
+
+            </RelativeLayout>
+
+
+
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:id="@+id/txtVehicleQty"
+            android:textSize="15sp" />
+
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+          android:layout_alignParentRight="true"
+            android:id="@+id/txtVehicleGrade"
+            android:textSize="15sp" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardView"
+        android:id="@+id/relativeSecondCard"
+        >
+
+
+        <android.support.v7.widget.CardView
+        android:layout_width="150dp"
+        android:id="@id/cardView"
+        android:layout_height="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+            android:layout_alignParentLeft="true">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtOilTitle"
+                android:text="Oil"
+                android:textSize="18sp"
+
+                android:gravity="center"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtOilName"
+                android:textSize="15sp"
+
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/txtOilTitle"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtOilPrice"
+                android:layout_below="@id/txtOilName"
+                android:textSize="15sp"
+                android:gravity="center" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="150dp"
+            android:id="@id/cardView"
+            android:layout_height="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp"
+            android:layout_alignParentRight="true">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtBrandTitle"
+                    android:layout_alignParentLeft="true"
+                    android:text="Brand"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtBrandName"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_below="@+id/txtBrandTitle"
+                    android:layout_alignParentStart="true" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeThirdCard"
+        android:layout_below="@id/relativeSecondCard">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="150dp"
+            android:id="@id/cardView"
+            android:layout_height="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp"
+            android:layout_alignParentLeft="true">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDissembleTitle"
+                   android:text="Dissembling Quantity"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold"
+                    android:textColor="@color/cardview_dark_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDissembleQty"
+                    android:text=""
+                    android:layout_below="@id/txtDissembleTitle"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+
+                    android:gravity="center" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="150dp"
+            android:id="@id/cardView"
+            android:layout_height="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp"
+            android:layout_alignParentRight="true">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDrainingTitle"
+                    android:text="Draining Quantity"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold"
+                    android:gravity="center"
+                    android:textColor="@color/cardview_dark_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDrainingQty"
+                    android:text=""
+                    android:layout_below="@id/txtDrainingTitle"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+
+                    android:gravity="center"/>
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
