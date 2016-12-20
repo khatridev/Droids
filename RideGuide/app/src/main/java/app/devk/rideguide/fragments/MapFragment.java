@@ -357,7 +357,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Locatio
 
     @Override
     public void onLocationChanged(Location location) {
-        Toast.makeText(getActivity(),"Location changed "+location.getLatitude()+","+location.getLongitude(),Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(),"Location changed "+location.getLatitude()+","+location.getLongitude(),Toast.LENGTH_SHORT).show();
         m.setPosition(new LatLng(location.getLatitude(),location.getLongitude()));
 
 
