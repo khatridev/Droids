@@ -24,6 +24,10 @@
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyDGK67MyTz2oMaWNxLUQdgLKHFe-cGYRbM" />
 
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +35,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".utils.GeoFenceTransitionService" android:exported="true" android:enabled="true"/>
 
     </application>
 

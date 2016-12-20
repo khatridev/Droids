@@ -11,6 +11,8 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,6 +21,10 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -84,6 +90,8 @@ public class VehicleFragment extends Fragment {
     private TextView txtOilPrice;
     ProgressDialog progressDialog;
 
+    private GoogleApiClient mApiClient;
+
 
 
 
@@ -139,6 +147,7 @@ public class VehicleFragment extends Fragment {
         txtVehicleDrainingQty= (TextView) v.findViewById(R.id.txtDrainingQty);
 
 
+
         return  v;
     }
 
@@ -165,6 +174,8 @@ public class VehicleFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
+
 
     /**
      * This interface must be implemented by activities that contain this

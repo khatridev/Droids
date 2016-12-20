@@ -36,7 +36,7 @@ public class SplashActivity extends AppCompatActivity {
                 Intent i = new Intent(SplashActivity.this, VehicleActivity.class);
                 startActivity(i);
 
-                
+
                 finish();
             }
         }, TIME);

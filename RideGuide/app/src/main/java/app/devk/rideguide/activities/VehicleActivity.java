@@ -1,5 +1,7 @@
 package app.devk.rideguide.activities;
 
+import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -15,6 +17,7 @@ import android.widget.ListView;
 
 import app.devk.rideguide.R;
 import app.devk.rideguide.fragments.LocateFragment;
+import app.devk.rideguide.fragments.MapFragment;
 import app.devk.rideguide.fragments.VehicleFragment;
 
 public class VehicleActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,LocateFragment.OnFragmentInteractionListener {
@@ -32,7 +35,15 @@ public class VehicleActivity extends AppCompatActivity implements NavigationView
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private NavigationView navigationView;
 
+    private static final String NOTIFICATION_MSG = "NOTIFICATION MSG";
+
     private  Button btn;
+
+    public static Intent makeNotificationIntent(Context context, String msg) {
+        Intent intent = new Intent( context, VehicleActivity.class );
+        intent.putExtra( NOTIFICATION_MSG, msg );
+        return intent;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,7 +126,7 @@ public class VehicleActivity extends AppCompatActivity implements NavigationView
             case R.id.nav_locate:
 //                Intent i= new Intent(this,LocaterActivity.class);
 //                startActivity(i);
-                getSupportFragmentManager().beginTransaction().replace(R.id.mainlayout,new LocateFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.mainlayout,new MapFragment()).commit();
                 drawerLayout.closeDrawer(Gravity.LEFT);
                 break;
             case R.id.nav_vehicles:
